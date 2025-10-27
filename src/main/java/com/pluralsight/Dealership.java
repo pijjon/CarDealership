@@ -13,6 +13,7 @@ public class Dealership {
         this.name = name;
         this.address = address;
         this.phone = phone;
+        this.inventory = new ArrayList<Vehicle>();
     }
 
 }

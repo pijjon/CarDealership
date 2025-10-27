@@ -19,4 +19,36 @@ public class Dealership {
     public List<Vehicle> getAllVehicles() {
         return this.inventory;
     }
+
+    public List<Vehicle> getVehiclesByPrice() {
+        return this.inventory;
+    }
+
+    public List<Vehicle> getVehiclesByMake() {
+        return this.inventory;
+    }
+
+    public List<Vehicle> getVehiclesByYear() {
+        return this.inventory;
+    }
+
+    public List<Vehicle> getVehiclesByColor() {
+        return this.inventory;
+    }
+
+    public List<Vehicle> getVehiclesByMileage() {
+        return this.inventory;
+    }
+
+    public List<Vehicle> getVehiclesByType() {
+        return this.inventory;
+    }
+
+    public void addVehicle(String vehicle) {
+
+    }
+
+    public void removeVehicle(String vehicle) {
+
+    }
 }

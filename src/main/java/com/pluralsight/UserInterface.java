@@ -43,5 +43,12 @@ public class UserInterface {
 
     }
 
+    public int askUserInt(String question) {
+        System.out.println(question);
+        int response = scanner.nextInt();
+        scanner.nextLine();
+        return response;
+    }
+
 
 }

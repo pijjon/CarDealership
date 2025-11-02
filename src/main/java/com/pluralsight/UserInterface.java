@@ -75,6 +75,11 @@ public class UserInterface {
 
     public void processGetByPriceRequest() {
 
+        double min = askUserInt("Please provide a minimum price to filter by:");
+        double max = askUserInt("Please provide a maximum price to filter by:");
+
+        displayVehicles(dealership.getVehiclesByPrice(min, max));
+
     }
 
     public void processGetByMakeModelRequest() {

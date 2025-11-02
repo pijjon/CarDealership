@@ -25,7 +25,7 @@ public class Vehicle {
         System.out.printf("""
                 VIN: %d
                 Vehicle Type: %s
-                %s %s %s
+                Make/Model: %s %s %s
                 Miles: %d
                 Price: %.2f
                 

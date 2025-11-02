@@ -150,5 +150,17 @@ public class UserInterface {
         }
     }
 
+    public double askUserDouble(String question) {
+        try {
+            System.out.println(question);
+            double response = scanner.nextDouble();
+            scanner.nextLine();
+            return response;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
 
 }

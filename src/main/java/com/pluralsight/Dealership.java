@@ -74,7 +74,12 @@ public class Dealership {
         this.inventory.add(vehicle);
     }
 
-    public void removeVehicle(String vehicle) {
-
+    public void removeVehicle(int vin) {
+        for (Vehicle vehicle : this.inventory) {
+            if (vehicle.getVin() == vin) {
+                this.inventory.remove(vehicle);
+                return;
+            }
+        }
     }
 }

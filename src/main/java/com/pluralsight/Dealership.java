@@ -29,8 +29,13 @@ public class Dealership {
 
     }
 
-    public List<Vehicle> getVehiclesByMake() {
-        return this.inventory;
+    public List<Vehicle> getVehiclesByMake(String make, String model) {
+        List<Vehicle> filtered = this.inventory.stream()
+                .filter(n -> n.getMake().contains(make))
+                .filter(n -> n.getModel().contains(model))
+                .toList();
+
+        return filtered;
     }
 
     public List<Vehicle> getVehiclesByYear() {

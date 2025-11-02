@@ -114,6 +114,17 @@ public class UserInterface {
 
     }
 
+    public String askUserStr(String question) {
+        try {
+            System.out.println(question);
+            String response = scanner.nextLine();
+            return response;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public int askUserInt(String question) {
         try {
             System.out.println(question);

@@ -83,7 +83,9 @@ public class UserInterface {
     }
 
     public void processGetByMakeModelRequest() {
-        
+        String responseMake = askUserStr("Please provide vehicle make to filter by: ");
+        String responseModel = askUserStr("Please provide vehicle model to filter by: ");
+        displayVehicles(dealership.getVehiclesByMake(responseMake, responseModel));
     }
 
     public void processGetByYearRequest() {

@@ -89,19 +89,29 @@ public class UserInterface {
     }
 
     public void processGetByYearRequest() {
+        int minYear = askUserInt("Please provide a minimum year to filter by: ");
+        int maxYear = askUserInt("Please provide a maximum year to filter by: ");
 
+        displayVehicles(dealership.getVehiclesByYear(minYear, maxYear));
     }
 
     public void processGetByColorRequest() {
+        String color = askUserStr("Please provide a color to filter by: ");
 
+        displayVehicles(dealership.getVehiclesByColor(color));
     }
 
     public void processGetByMileageRequest() {
+        int minMileage = askUserInt("Please provide minimum mileage to filter by: ");
+        int maxMileage = askUserInt("Please provide maximum mileage to filter by: ");
 
+        displayVehicles(dealership.getVehiclesByMileage(minMileage, maxMileage));
     }
 
     public void processGetByVehicleTypeRequest() {
+        String vehicleType = askUserStr("Please provide vehicle type to filter by: ");
 
+        displayVehicles(dealership.getVehiclesByType(vehicleType));
     }
 
     public void processGetAllVehiclesRequest() {

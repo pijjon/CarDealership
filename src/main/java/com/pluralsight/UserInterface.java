@@ -134,7 +134,9 @@ public class UserInterface {
     }
 
     public void processRemoveVehicleRequest() {
+        int vin = askUserInt("Please provide the VIN of a vehicle to remove: ");
 
+        dealership.removeVehicle(vin);
     }
 
     public String askUserStr(String question) {

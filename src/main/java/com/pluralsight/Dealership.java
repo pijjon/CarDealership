@@ -44,8 +44,8 @@ public class Dealership {
         return this.inventory;
     }
 
-    public void addVehicle(String vehicle) {
-
+    public void addVehicle(Vehicle vehicle) {
+        this.inventory.add(vehicle);
     }
 
     public void removeVehicle(String vehicle) {

@@ -24,6 +24,20 @@ public class UserInterface {
     }
 
     public void display() {
+        init();
+        while (true) {
+            int response = askUserInt("""
+                    1) Get By Price
+                    2) Get By Make Model
+                    3) Get By Year
+                    4) Get By Color
+                    5) Get By Mileage
+                    6) Get By Vehicle Type
+                    7) Get All Vehicles
+                    8) Add a Vehicle
+                    9) Remove a Vehicle
+             
+                    """);
 
             switch (response) {
                 case 1:

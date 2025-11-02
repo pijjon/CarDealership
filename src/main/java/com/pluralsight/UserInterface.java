@@ -12,7 +12,7 @@ public class UserInterface {
 
     private void init() {
         DealershipFileManager dealershipFileManager = new DealershipFileManager();
-        Dealership dealership1 =  dealershipFileManager.getDealership();
+        Dealership dealership1 = dealershipFileManager.getDealership();
         this.dealership = dealership1;
     }
 
@@ -123,8 +123,8 @@ public class UserInterface {
             return response;
         } catch (Exception e) {
             e.printStackTrace();
+            return "";
         }
-
     }
 
     public int askUserInt(String question) {
@@ -136,6 +136,7 @@ public class UserInterface {
         }
         catch (Exception e){
             e.printStackTrace();
+            return 0;
         }
     }
 

@@ -21,5 +21,21 @@ public class Vehicle {
         this.price = price;
     }
 
-
+    public void display() {
+        System.out.printf("""
+                VIN: %d
+                Vehicle Type: %s
+                %s %s %s
+                Miles: %d
+                Price: %.2f
+                
+                """,
+                this.vin, 
+                this.vehicleType,
+                this.color,
+                this.make,
+                this.model,
+                this.odometer,
+                this.price);
+    }
 }

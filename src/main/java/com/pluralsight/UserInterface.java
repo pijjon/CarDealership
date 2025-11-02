@@ -7,8 +7,7 @@ public class UserInterface {
     public static Scanner scanner = new Scanner(System.in);
     private Dealership dealership;
 
-    public UserInterface(Dealership dealership) {
-        this.dealership = dealership;
+    public UserInterface() {
     }
 
     private void init() {

@@ -44,4 +44,8 @@ public class DealershipFileManager {
                 Double.parseDouble(vehicleParts[7]));
         return vehicle;
     }
+
+    private static void saveDealership() {
+
+    }
 }

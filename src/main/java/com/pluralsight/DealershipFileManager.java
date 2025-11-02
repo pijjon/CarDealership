@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class DealershipFileManager {
 
-    public static void getDealership() {
+    public static Dealership getDealership() {
         try (BufferedReader reader = new BufferedReader(new FileReader("inventory.csv"))) {
 
             // getter header from csv file to input into Dealership constructor
@@ -22,6 +22,7 @@ public class DealershipFileManager {
 
                 dealership.addVehicle(vehicle);
             }
+            return dealership;
 
 
         } catch (IOException e) {

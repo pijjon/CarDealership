@@ -30,7 +30,7 @@ public class Vehicle {
                 Price: %.2f
                 
                 """,
-                this.vin, 
+                this.vin,
                 this.vehicleType,
                 this.color,
                 this.make,

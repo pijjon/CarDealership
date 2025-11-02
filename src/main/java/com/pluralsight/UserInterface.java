@@ -25,6 +25,39 @@ public class UserInterface {
 
     public void display() {
 
+            switch (response) {
+                case 1:
+                    processGetByPriceRequest();
+                    break;
+                case 2:
+                    processGetByMakeModelRequest();
+                    break;
+                case 3:
+                    processGetByYearRequest();
+                    break;
+                case 4:
+                    processGetByColorRequest();
+                    break;
+                case 5:
+                    processGetByMileageRequest();
+                    break;
+                case 6:
+                    processGetByVehicleTypeRequest();
+                    break;
+                case 7:
+                    processGetAllVehiclesRequest();
+                    break;
+                case 8:
+                    processAddVehicleRequest();
+                    break;
+                case 9:
+                    processRemoveVehicleRequest();
+                    break;
+                default:
+                    System.out.println("Invalid input, please try again");
+
+            }
+        }
     }
 
     public void processGetByPriceRequest() {

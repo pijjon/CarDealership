@@ -15,6 +15,10 @@ public class UserInterface {
 
     }
 
+    public void processGetByMakeModelRequest() {
+        
+    }
+
     public void processGetByYearRequest() {
 
     }

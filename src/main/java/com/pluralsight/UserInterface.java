@@ -119,7 +119,18 @@ public class UserInterface {
     }
 
     public void processAddVehicleRequest() {
+        Vehicle newVehicle = new Vehicle(
+                askUserInt("Please provide a VIN number: "),
+                askUserInt("Please provide the year of the vehicle: "),
+                askUserStr("Please provide the make of the vehicle: "),
+                askUserStr("Please provide the model of the vehicle: "),
+                askUserStr("Please provide vehicle type of the vehicle: "),
+                askUserStr("Please provide the color of the vehicle: "),
+                askUserInt("Please provide the mileage of the vehicle: "),
+                askUserDouble("Please provide a price for the vehicle: ")
+        );
 
+        dealership.addVehicle(newVehicle);
     }
 
     public void processRemoveVehicleRequest() {

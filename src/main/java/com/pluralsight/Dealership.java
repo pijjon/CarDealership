@@ -20,8 +20,13 @@ public class Dealership {
         return this.inventory;
     }
 
-    public List<Vehicle> getVehiclesByPrice() {
-        return this.inventory;
+    public List<Vehicle> getVehiclesByPrice(double min, double max) {
+        List<Vehicle> filtered = this.inventory.stream()
+                .filter(n -> n.getPrice() >= min && n.getPrice() <= max)
+                .toList();
+
+        return filtered;
+
     }
 
     public List<Vehicle> getVehiclesByMake() {

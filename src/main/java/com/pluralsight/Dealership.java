@@ -38,20 +38,36 @@ public class Dealership {
         return filtered;
     }
 
-    public List<Vehicle> getVehiclesByYear() {
-        return this.inventory;
+    public List<Vehicle> getVehiclesByYear(int minYear, int maxYear) {
+        List<Vehicle> filtered = this.inventory.stream()
+                .filter(n -> n.getYear() >= minYear && n.getYear() <= maxYear)
+                .toList();
+
+        return filtered;
     }
 
-    public List<Vehicle> getVehiclesByColor() {
-        return this.inventory;
+    public List<Vehicle> getVehiclesByColor(String color) {
+        List<Vehicle> filtered = this.inventory.stream()
+                .filter(n -> n.getColor().contains(color))
+                .toList();
+
+        return filtered;
     }
 
-    public List<Vehicle> getVehiclesByMileage() {
-        return this.inventory;
+    public List<Vehicle> getVehiclesByMileage(int minMileage, int maxMileage) {
+        List<Vehicle> filtered = this.inventory.stream()
+                .filter(n -> n.getOdometer() >= minMileage && n.getOdometer() <= maxMileage)
+                .toList();
+
+        return filtered;
     }
 
-    public List<Vehicle> getVehiclesByType() {
-        return this.inventory;
+    public List<Vehicle> getVehiclesByType(String vehicleType) {
+        List<Vehicle> filtered = this.inventory.stream()
+                .filter(n -> n.getVehicleType().equals(vehicleType))
+                .toList();
+
+        return filtered;
     }
 
     public void addVehicle(Vehicle vehicle) {

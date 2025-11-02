@@ -16,6 +16,12 @@ public class UserInterface {
         this.dealership = dealership1;
     }
 
+    private void displayVehicles(List<Vehicle> vehicles) {
+        for (Vehicle vehicle : vehicles) {
+            vehicle.display();
+        }
+    }
+
     public void display() {
 
     }

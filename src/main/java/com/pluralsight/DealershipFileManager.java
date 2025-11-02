@@ -1,8 +1,6 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 
 public class DealershipFileManager {
@@ -46,7 +44,15 @@ public class DealershipFileManager {
         return vehicle;
     }
 
-    private static void saveDealership() {
-
+    public static void saveDealership(Dealership dealership) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("inventory.csv"))) {
+            //write the dealership header
+            for (Vehicle vehicle : dealership.getAllVehicles()) {
+                // write new line
+            }
+        }
+        catch (IOException e) {
+            System.out.println("Error writing to file");
+        }
     }
 }

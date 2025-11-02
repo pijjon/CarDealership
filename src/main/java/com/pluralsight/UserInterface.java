@@ -137,6 +137,8 @@ public class UserInterface {
         int vin = askUserInt("Please provide the VIN of a vehicle to remove: ");
 
         dealership.removeVehicle(vin);
+
+        DealershipFileManager.saveDealership(this.dealership);
     }
 
     public String askUserStr(String question) {

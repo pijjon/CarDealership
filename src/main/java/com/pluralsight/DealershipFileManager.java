@@ -47,8 +47,21 @@ public class DealershipFileManager {
     public static void saveDealership(Dealership dealership) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("inventory.csv"))) {
             //write the dealership header
+            writer.write(String.format("%s|%s|%s", dealership.getName(), dealership.getAddress(), dealership.getPhone()));
+            writer.newLine();
             for (Vehicle vehicle : dealership.getAllVehicles()) {
                 // write new line
+                writer.write(String.format("%d|%d|%s|%s|%s|%s|%d|%.2f",
+                        vehicle.getVin(),
+                        vehicle.getYear(),
+                        vehicle.getMake(),
+                        vehicle.getModel(),
+                        vehicle.getVehicleType(),
+                        vehicle.getColor(),
+                        vehicle.getOdometer(),
+                        vehicle.getPrice()
+                ));
+                writer.newLine();
             }
         }
         catch (IOException e) {

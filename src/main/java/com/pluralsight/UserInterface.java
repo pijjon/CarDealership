@@ -130,7 +130,9 @@ public class UserInterface {
                 askUserDouble("Please provide a price for the vehicle: ")
         );
 
-        dealership.addVehicle(newVehicle);
+        this.dealership.addVehicle(newVehicle);
+
+        DealershipFileManager.saveDealership(this.dealership);
     }
 
     public void processRemoveVehicleRequest() {
